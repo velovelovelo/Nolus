@@ -188,12 +188,6 @@ nolusd keys import wallet wallet.backup
 nolusd q bank balances $(nolusd keys show wallet -a)
 ```
 
-##  Validator management
-
-
-Please make sure you have adjusted **moniker**, **identity**, **details** and **website** to match your values.
-
-
 #### Create new validator
 
 ```bash
@@ -342,7 +336,7 @@ nolusd tx gov vote 1 nowithveto --from wallet --chain-id nolus-rila --gas-adjust
 
 
 
-## Check status validator
+## Check validator status
 
 #### Get validator info
 
