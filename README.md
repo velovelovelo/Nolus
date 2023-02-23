@@ -144,6 +144,7 @@ curl -L https://snapshots.kjnodes.com/nolus-testnet/snapshot_latest.tar.lz4 | ta
 ```bash
 sudo systemctl start nolusd && sudo journalctl -u nolusd -f --no-hostname -o cat
 ```
+
 ##  Wallet
 
 #### Add new key
@@ -188,7 +189,8 @@ nolusd keys import wallet wallet.backup
 nolusd q bank balances $(nolusd keys show wallet -a)
 ```
 
-#### Create new validator
+### Before create validator make sure your node already sync
+#### Create validator
 
 ```bash
 nolusd tx staking create-validator \
@@ -252,7 +254,7 @@ nolusd q staking validators -oj --limit=3000 | jq '.validators[] | select(.statu
 nolusd q staking validator $(nolusd keys show wallet --bech val -a)
 ```
 
-## Token management
+## Delegate-Withdraw
 
 #### Withdraw rewards from all validators
 
@@ -296,7 +298,7 @@ nolusd tx staking unbond $(nolusd keys show wallet --bech val -a) 1000000unls --
 nolusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000unls --from wallet --chain-id nolus-rila
 ```
 
-## Governance
+## Vote Governance
 
 #### List all proposals
 
@@ -378,7 +380,7 @@ rm -rf $HOME/.nolus
 rm -rf $HOME/nolus-core
 ```
 
-## Service Management
+## Usefull command
 
 #### Reload service configuration
 
