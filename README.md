@@ -16,6 +16,9 @@ Minimum requirements
 >- RPC : https://rpc.nolus.velochan.xyz
 >- gRPC : https://grpc.nolus.velochan.xyz
 
+# Explorer
+### https://explorer-rila.nolus.io/nolus-rila
+
 ### Setup validator name
 
 
