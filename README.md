@@ -250,7 +250,8 @@ make build
 
 #prepare binaries
 
-```bash mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin
+```bash 
+mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin
 mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin/
 rm -rf build
 ```
