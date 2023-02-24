@@ -238,6 +238,22 @@ nolusd tx staking edit-validator \
 --fees 700unls \
 -y
 ```
+# Upgrade
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.1.43 | **Custom Port**: 43
+cd $HOME
+rm -rf nolus-core
+git clone https://github.com/Nolus-Protocol/nolus-core.git
+cd nolus-core
+git checkout v0.1.43
+make build
+
+#prepare binaries
+mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin
+mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin/
+rm -rf build
+```
+
+when upgrade block height is reached, Cosmovisor will handle it automatically!*
 
 #### Unjail validator
 
