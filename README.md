@@ -249,9 +249,10 @@ make build
 ```
 
 #prepare binaries
-```mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin
-```mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin/
-```rm -rf build
+
+```bash mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin
+mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin/
+rm -rf build
 ```
 
 when upgrade block height is reached, Cosmovisor will handle it automatically!*
