@@ -10,7 +10,11 @@
 - 120+ GB SSD
 ---
 
-# Manual Installation
+# Official Links
+### [Official Document](https://docs-nolus-protocol.notion.site/Run-a-Full-Node-7a92545223e7483bb4a02cce30b53aa8)
+### [Nolus Official Discord](https://discord.gg/nolus-protocol)
+ 
+ # Manual Installation
 
 **Chain ID**: nolus-rila
 
