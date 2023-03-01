@@ -462,11 +462,11 @@ sudo journalctl -u nolusd -f --no-hostname -o cat
 
 ```bash
 sudo systemctl stop nolusd
-cp $HOME/.planqd/data/priv_validator_state.json $HOME/.planqd/priv_validator_state.json.backup
+cp $HOME/.nolus/data/priv_validator_state.json $HOME/.nolus/priv_validator_state.json.backup
 rm -rf $HOME/.planqd/data
 
-curl -L https://snapshot.nolus.velochan.xyz/snapshots/nolus/nolus_20230301.tar.lz4   | lz4 -dc - | tar -xf - -C $HOME/.nolus
+curl -L https://snapshot.nolus.velochan.xyz/snapshots/nolus/nolus-snapshot-20230301.tar.lz4   | lz4 -dc - | tar -xf - -C $HOME/.nolus
 mv $HOME/.planqd/priv_validator_state.json.backup $HOME/.planqd/data/priv_validator_state.json
 
-sudo systemctl restart planqd && journalctl -u planqd -f --no-hostname -o cat
+sudo systemctl restart nolusd && journalctl -u nolusd -f --no-hostname -o cat
 ```
